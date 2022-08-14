@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AddCategory } from "./components/AddCategory";
 
 export const GifExpertApp = () => {
   const [categories, setCategories] = useState([
@@ -17,10 +18,7 @@ export const GifExpertApp = () => {
       <h1 className="text-4xl text-white">GifExpertApp</h1>
 
       {/* Input */}
-      <input
-        className="self-start px-2 py-1 rounded outline-none border border-cyan-400"
-        type="text"
-      />
+      <AddCategory />
 
       {/* Listado de GIFs */}
       <button
