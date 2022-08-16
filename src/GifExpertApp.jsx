@@ -10,6 +10,7 @@ export const GifExpertApp = () => {
   const onAddCategory = (newCategory) => {
     // setCategories([...categories, "Naruto"]);
     // console.log(newCategory);
+    if (categories.includes(newCategory)) return;
     setCategories(categories.concat(newCategory));
   };
 
