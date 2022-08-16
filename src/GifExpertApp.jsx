@@ -7,9 +7,10 @@ export const GifExpertApp = () => {
     "Dragon Ball",
   ]);
 
-  const onAddCategory = () => {
+  const onAddCategory = (newCategory) => {
     // setCategories([...categories, "Naruto"]);
-    setCategories(categories.concat("Naruto"));
+    // console.log(newCategory);
+    setCategories(categories.concat(newCategory));
   };
 
   return (
@@ -18,7 +19,10 @@ export const GifExpertApp = () => {
       <h1 className="text-4xl text-white">GifExpertApp</h1>
 
       {/* Input */}
-      <AddCategory setCategories={setCategories} categories={categories} />
+      <AddCategory
+        // setCategories={setCategories} categories={categories}
+        onNewCategory={onAddCategory}
+      />
 
       {/* Listado de GIFs */}
       <ol className="list-decimal list-inside text-white">
