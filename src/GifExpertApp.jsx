@@ -18,15 +18,9 @@ export const GifExpertApp = () => {
       <h1 className="text-4xl text-white">GifExpertApp</h1>
 
       {/* Input */}
-      <AddCategory />
+      <AddCategory setCategories={setCategories} categories={categories} />
 
       {/* Listado de GIFs */}
-      <button
-        onClick={onAddCategory}
-        className="active:scale-95 transition-all self-start bg-white text-cyan-600 rounded p-1"
-      >
-        Agregar
-      </button>
       <ol className="list-decimal list-inside text-white">
         {categories.map((category) => {
           return <li key={category}>{category}</li>;
