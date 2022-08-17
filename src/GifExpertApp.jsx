@@ -6,7 +6,7 @@ export const GifExpertApp = () => {
   const [categories, setCategories] = useState(["Hunter X Hunter"]);
 
   const onAddCategory = (newCategory) => {
-    // setCategories([...categories, "Naruto"]);
+    // setCategories([newCategory, ...categories]);
     // console.log(newCategory);
     if (categories.includes(newCategory)) return;
     setCategories(categories.concat(newCategory));
@@ -29,9 +29,12 @@ export const GifExpertApp = () => {
       </div>
 
       {/* GIF Grid Results display */}
-      {categories.map((category) => (
-        <GifGrid key={category} category={category} />
-      ))}
+      {categories
+        .slice(0)
+        .reverse()
+        .map((category) => (
+          <GifGrid key={category} category={category} />
+        ))}
     </div>
   );
 };
