@@ -18,14 +18,20 @@ export const GifExpertApp = () => {
       <h1 className="text-4xl text-white">GifExpertApp</h1>
 
       {/* Add GIF Category Component */}
-      <AddCategory onNewCategory={onAddCategory} />
+      <div className="flex gap-2">
+        <AddCategory onNewCategory={onAddCategory} />
+        <button
+          onClick={() => setCategories([])}
+          className="bg-blue-900 rounded-full text-white px-3"
+        >
+          Limpiar
+        </button>
+      </div>
 
       {/* GIF Grid Results display */}
-      <div className="list-decimal list-inside text-white grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-10">
-        {categories.map((category) => (
-          <GifGrid key={category} category={category} />
-        ))}
-      </div>
+      {categories.map((category) => (
+        <GifGrid key={category} category={category} />
+      ))}
     </div>
   );
 };
