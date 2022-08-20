@@ -40,9 +40,13 @@ export const GifExpertApp = () => {
         .map((category) => (
           <div className=" flex justify-center text-white" key={category}>
             {isMounted ? (
-              <div className="flex flex-col h-80 items-center justify-center">
-                <p>There are no results.</p>
-                <p>Use the search engine above to search for GIF's</p>
+              <div className="flex flex-col gap-3 h-96 items-center justify-center">
+                <p className="text-3xl font-bold">
+                  There are no results to show right now...
+                </p>
+                <p className="text-3xl font">
+                  Use the search engine above to search for GIF's!
+                </p>
               </div>
             ) : (
               <GifGrid category={category} />
