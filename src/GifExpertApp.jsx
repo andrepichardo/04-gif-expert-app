@@ -1,15 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
 
 export const GifExpertApp = () => {
-  const [categories, setCategories] = useState(["Hunter X Hunter"]);
+  const [categories, setCategories] = useState([""]);
+  const [isMounted, setIsMounted] = useState(true);
 
   const onAddCategory = (newCategory) => {
     // setCategories([newCategory, ...categories]);
     // console.log(newCategory);
     if (categories.includes(newCategory)) return;
     setCategories(categories.concat(newCategory));
+    setIsMounted(false);
   };
 
   return (
@@ -21,7 +23,7 @@ export const GifExpertApp = () => {
       <div className="flex gap-2">
         <AddCategory onNewCategory={onAddCategory} />
         <button
-          onClick={() => setCategories([])}
+          onClick={() => setIsMounted(true) & setCategories([""])}
           className="bg-blue-900 rounded-full text-white px-3"
         >
           Limpiar
@@ -33,7 +35,15 @@ export const GifExpertApp = () => {
         .slice(0)
         .reverse()
         .map((category) => (
-          <GifGrid key={category} category={category} />
+          <div className=" flex justify-center" key={category}>
+            {isMounted ? (
+              <div className=" self-center h-80 flex items-center">
+                There are no results.
+              </div>
+            ) : (
+              <GifGrid category={category} />
+            )}
+          </div>
         ))}
     </div>
   );
