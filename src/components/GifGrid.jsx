@@ -15,6 +15,15 @@ export const GifGrid = ({ category }) => {
         </div>
       )}
 
+      {(images.length === 0) & !isLoading ? (
+        <div className="flex flex-col lg:flex-row gap-2 h-80 items-center text-3xl justify-center">
+          There are no results for{" "}
+          <span className="underline underline-offset-2 text-emerald-400 font-bold">{`${category}`}</span>{" "}
+          at this moment...
+          <span>Try Again!</span>
+        </div>
+      ) : null}
+
       <div className="grid sm:grid-cols-2 md:grid-cols-4 xl:gap-0 gap-3 mb-10">
         {images.map((image) => (
           <GifItem key={image.id} {...image} />
