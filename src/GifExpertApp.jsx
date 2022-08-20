@@ -9,6 +9,9 @@ export const GifExpertApp = () => {
   const onAddCategory = (newCategory) => {
     // setCategories([newCategory, ...categories]);
     // console.log(newCategory);
+    while (categories.length > 0) {
+      categories.pop();
+    }
     if (categories.includes(newCategory)) return;
     setCategories(categories.concat(newCategory));
     setIsMounted(false);
@@ -35,10 +38,11 @@ export const GifExpertApp = () => {
         .slice(0)
         .reverse()
         .map((category) => (
-          <div className=" flex justify-center" key={category}>
+          <div className=" flex justify-center text-white" key={category}>
             {isMounted ? (
-              <div className=" self-center h-80 flex items-center">
-                There are no results.
+              <div className="flex flex-col h-80 items-center justify-center">
+                <p>There are no results.</p>
+                <p>Use the search engine above to search for GIF's</p>
               </div>
             ) : (
               <GifGrid category={category} />
