@@ -2,6 +2,7 @@ import { useState } from "react";
 import { RiBrush3Line } from "react-icons/ri";
 import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
+import logoGiphy from "./assets/logos/giphy-logo.png";
 
 export const GifExpertApp = () => {
   const [categories, setCategories] = useState([""]);
@@ -21,7 +22,10 @@ export const GifExpertApp = () => {
   return (
     <div className="bg-gradient-to-t from-slate-500 bg-cyan-900  h-full min-h-screen flex flex-col p-10 gap-4">
       {/* Title */}
-      <h1 className="text-4xl md:text-5xl self-center italic font-mono font-semibold text-emerald-400">
+      <div className="absolute text-white w-40 md:w-44 right-3 -mt-6">
+        <img src={logoGiphy} alt="Powered by GIPHY." />
+      </div>
+      <h1 className="text-4xl md:text-5xl self-center italic font-mono font-semibold mt-4 text-emerald-400">
         GifExpertApp
       </h1>
 
