@@ -13,7 +13,6 @@ export const AddCategory = ({ onNewCategory }) => {
     if (inputValue.trim().length <= 1) return;
     setInputValue("");
     onNewCategory(inputValue.trim());
-    // setCategories(categories.concat(inputValue));
   };
 
   return (

@@ -1,7 +1,6 @@
 import { useState } from "react";
+import { AddCategory, GifGrid } from "./components";
 import { RiBrush3Line } from "react-icons/ri";
-import { AddCategory } from "./components/AddCategory";
-import { GifGrid } from "./components/GifGrid";
 import logoGiphy from "./assets/logos/giphy-logo.png";
 
 export const GifExpertApp = () => {
@@ -9,19 +8,18 @@ export const GifExpertApp = () => {
   const [isMounted, setIsMounted] = useState(true);
 
   const onAddCategory = (newCategory) => {
-    // setCategories([newCategory, ...categories]);
-    // console.log(newCategory);
     while (categories.length > 0) {
       categories.pop();
     }
     if (categories.includes(newCategory)) return;
+    // setCategories([newCategory, ...categories]);
     setCategories(categories.concat(newCategory));
     setIsMounted(false);
   };
 
   return (
     <div className="bg-gradient-to-t from-slate-500 bg-cyan-900  h-full min-h-screen flex flex-col p-10 gap-4">
-      {/* Title */}
+      {/* Title & Attribution */}
       <div className="absolute text-white w-40 md:w-44 right-3 -mt-6">
         <img src={logoGiphy} alt="Powered by GIPHY." />
       </div>
@@ -29,7 +27,7 @@ export const GifExpertApp = () => {
         GifExpertApp
       </h1>
 
-      {/* Add GIF Category Component */}
+      {/* Search GIF's Component */}
       <div className="flex justify-center items-center mt-6 gap-3">
         <AddCategory onNewCategory={onAddCategory} />
         <button
@@ -40,7 +38,7 @@ export const GifExpertApp = () => {
         </button>
       </div>
 
-      {/* GIF Grid Results display */}
+      {/* GIF Grid Results Display */}
       {categories
         .slice(0)
         .reverse()
