@@ -18,12 +18,12 @@ export const GifExpertApp = () => {
   };
 
   return (
-    <div className="bg-gradient-to-t from-slate-500 bg-cyan-900  h-full min-h-screen flex flex-col p-10 gap-4">
+    <div className="bg-gradient-to-t from-purple-900 bg-blue-900  h-full min-h-screen flex flex-col p-10 gap-4">
       {/* Title & Attribution */}
       <div className="absolute text-white w-40 md:w-44 right-3 -mt-6">
         <img src={logoGiphy} alt="Powered by GIPHY." />
       </div>
-      <h1 className="text-4xl md:text-5xl self-center italic font-mono font-semibold mt-4 text-emerald-400">
+      <h1 className="text-4xl md:text-5xl self-center italic font-mono font-semibold mt-10 text-emerald-400">
         GifExpertApp
       </h1>
 
@@ -32,9 +32,9 @@ export const GifExpertApp = () => {
         <AddCategory onNewCategory={onAddCategory} />
         <button
           onClick={() => setIsMounted(true) & setCategories([""])}
-          className=" border-2 border-blue-200 rounded-full flex w-[50px] h-[50px] justify-center items-center text-white px-3 active:scale-90 transition-all"
+          className=" border-2 border-white rounded-full flex w-[50px] h-[50px] justify-center items-center text-white px-3 active:scale-90 transition-all"
         >
-          <RiBrush3Line className="text-blue-200 w-full h-full" />
+          <RiBrush3Line className="text-white w-full h-full" />
         </button>
       </div>
 
@@ -50,7 +50,7 @@ export const GifExpertApp = () => {
                   There are no results to show right now...
                 </p>
                 <p className="text-3xl font">
-                  Use the search engine above to search for GIF's!
+                  Use the search engine above to search for GIFs!
                 </p>
               </div>
             ) : (

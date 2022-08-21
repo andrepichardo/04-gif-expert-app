@@ -29,9 +29,9 @@ export const AddCategory = ({ onNewCategory }) => {
       />
       <button
         onClick={onSubmit}
-        className="bg-cyan-700 flex items-center justify-center rounded-full w-14 h-14 absolute -right-0.5 group active:ring-2 active:scale-90 active:bg-white transition-all"
+        className="bg-emerald-500 flex items-center justify-center rounded-full w-14 h-14 absolute -right-0.5 group active:ring-2 ring-emerald-500 active:scale-90 active:bg-white transition-all"
       >
-        <RiSearchLine className="text-white group-active:text-cyan-700 w-7 h-7" />
+        <RiSearchLine className="text-white group-active:text-emerald-500 w-7 h-7" />
       </button>
     </form>
   );
