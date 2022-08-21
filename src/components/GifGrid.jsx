@@ -39,7 +39,7 @@ export const GifGrid = ({ category }) => {
         </div>
       ) : null}
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 justify-center gap-5 mb-10">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 justify-center gap-4 mb-10">
         {images.map((image) => (
           <GifItem key={image.id} {...image} />
         ))}

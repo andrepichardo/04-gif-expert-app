@@ -9,7 +9,7 @@ export const GifItem = ({ title, url }) => {
         />
       </div>
       <div className="flex justify-center items-center w-full h-full">
-        <p className="text-lg w-fit px-2.5 py-1 font-semibold capitalize text-center">
+        <p className="text-lg w-fit px-2.5 py-1.5 font-semibold capitalize text-center">
           {title}
         </p>
       </div>
