@@ -18,12 +18,12 @@ export const GifExpertApp = () => {
   };
 
   return (
-    <div className="bg-gradient-to-t from-purple-900 bg-blue-900  h-full min-h-screen flex flex-col p-10 gap-4">
+    <div className="bg-gradient-to-t from-purple-900 bg-blue-900  h-full min-h-screen flex flex-col py-10 px-5 md:p-10 gap-4">
       {/* Title & Attribution */}
       <div className="absolute text-white w-40 md:w-44 right-3 -mt-6">
         <img src={logoGiphy} alt="Powered by GIPHY." />
       </div>
-      <h1 className="text-4xl md:text-5xl self-center italic font-mono font-semibold mt-10 text-emerald-400">
+      <h1 className="text-4xl md:text-5xl self-center italic font-mono font-semibold mt-8 text-emerald-400">
         GifExpertApp
       </h1>
 
