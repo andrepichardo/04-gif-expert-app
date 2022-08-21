@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { RiSearchLine } from "react-icons/ri";
 
 export const AddCategory = ({ onNewCategory }) => {
   const [inputValue, setInputValue] = useState("");
@@ -16,14 +17,23 @@ export const AddCategory = ({ onNewCategory }) => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form
+      className="flex justify-center items-center relative w-full md:w-9/12 lg:w-6/12"
+      onSubmit={onSubmit}
+    >
       <input
-        className="self-start px-2 py-1 rounded outline-none border border-cyan-400"
+        className="px-3 py-[14px] w-full rounded-full outline-none"
         type="text"
-        placeholder="Buscar GIFs"
+        placeholder="Search GIFs..."
         value={inputValue}
         onChange={onInputChange}
       />
+      <button
+        onClick={onSubmit}
+        className="bg-cyan-700 flex items-center justify-center rounded-full w-14 h-14 absolute -right-0.5 group active:ring-2 active:scale-90 active:bg-white transition-all"
+      >
+        <RiSearchLine className="text-white group-active:text-cyan-700 w-7 h-7" />
+      </button>
     </form>
   );
 };

@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { RiBrush3Line } from "react-icons/ri";
 import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
 
@@ -18,18 +19,20 @@ export const GifExpertApp = () => {
   };
 
   return (
-    <div className="bg-cyan-800 h-full min-h-screen flex flex-col p-10 gap-4">
+    <div className="bg-gradient-to-t from-slate-500 bg-cyan-900  h-full min-h-screen flex flex-col p-10 gap-4">
       {/* Title */}
-      <h1 className="text-4xl text-white">GifExpertApp</h1>
+      <h1 className="text-4xl md:text-5xl self-center italic font-mono font-semibold text-emerald-400">
+        GifExpertApp
+      </h1>
 
       {/* Add GIF Category Component */}
-      <div className="flex gap-2">
+      <div className="flex justify-center items-center mt-6 gap-3">
         <AddCategory onNewCategory={onAddCategory} />
         <button
           onClick={() => setIsMounted(true) & setCategories([""])}
-          className="bg-blue-900 rounded-full text-white px-3"
+          className=" border-2 border-blue-200 rounded-full flex w-[50px] h-[50px] justify-center items-center text-white px-3 active:scale-90 transition-all"
         >
-          Limpiar
+          <RiBrush3Line className="text-blue-200 w-full h-full" />
         </button>
       </div>
 
