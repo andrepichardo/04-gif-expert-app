@@ -43,7 +43,7 @@ export const GifExpertApp = () => {
         .map((category) => (
           <div className=" flex justify-center text-white" key={category}>
             {isMounted ? (
-              <div className="flex flex-col gap-3 h-96 items-center justify-center">
+              <div className="flex flex-col text-center gap-5 h-96 items-center justify-center">
                 <p className="text-3xl font-bold">
                   There are no results to show right now...
                 </p>

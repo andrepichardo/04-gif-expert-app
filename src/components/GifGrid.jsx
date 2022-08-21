@@ -8,13 +8,15 @@ export const GifGrid = ({ category }) => {
 
   return (
     <div className="flex flex-col w-full gap-4">
-      <div className="flex gap-2">
+      <div className="flex flex-wrap gap-2">
         <span className="text-xl font-semibold">Showing results for:</span>
         <div className="flex gap-[1px]">
-          <h1 className="text-xl font-bold underline underline-offset-2 text-emerald-400">
-            {category}
+          <h1 className="text-xl font-bold ">
+            <span className="underline underline-offset-2 text-emerald-400">
+              {category}
+            </span>
+            <span className="text-xl">.</span>
           </h1>
-          <span className="text-xl">.</span>
         </div>
       </div>
 

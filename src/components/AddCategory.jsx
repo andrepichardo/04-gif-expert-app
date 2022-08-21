@@ -18,7 +18,7 @@ export const AddCategory = ({ onNewCategory }) => {
 
   return (
     <form
-      className="flex justify-center items-center relative w-full md:w-9/12 lg:w-6/12"
+      className="flex justify-center items-center relative w-10/12 md:w-9/12 lg:w-6/12"
       onSubmit={onSubmit}
     >
       <input
