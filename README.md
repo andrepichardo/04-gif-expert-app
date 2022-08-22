@@ -1,3 +1,7 @@
-# 04-gif-expert-app
+# GifExpertApp
 
-A simple and aesthetic GIF Search Engine.
+A simple and friendly GIF Search Engine powered by GIPHY.
+
+This project was made using React, TailwindCSS & Vite.
+
+Click the link below to see the project in action:
