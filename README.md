@@ -1,6 +1,6 @@
 # GifExpertApp
 
-A simple and friendly GIF Search Engine powered by GIPHY.
+A simple and friendly GIF Search Engine App powered by GIPHY.
 
 This project was developed and tested using React, TailwindCSS, Vite, Jest & React Testing Library.
 
