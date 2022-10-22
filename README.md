@@ -2,7 +2,7 @@
 
 A simple and friendly GIF Search Engine App powered by GIPHY.
 
-This project was developed and tested using React, TailwindCSS, Vite, Jest & React Testing Library.
+This project was developed using React, TailwindCSS and Vite.
 
 ## How to run
 
@@ -17,4 +17,4 @@ This project was developed and tested using React, TailwindCSS, Vite, Jest & Rea
 
 Check the project in action here: 
 - https://gif-expert-dre.netlify.app/
-- https://andrepichardo.github.io/04-gif-expert-app/
+- https://andrepichardo.github.io/gif-expert-app/
